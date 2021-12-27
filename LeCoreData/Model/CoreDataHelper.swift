@@ -59,6 +59,8 @@ class CoreDataHelper {
     //Obtenir les données
     func getRaces(_ completion: (([Race])-> Void)?) {
         let request: NSFetchRequest<Race> = Race.fetchRequest()
+        let sorter: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [sorter]
         do {
             let races = try context.fetch(request)
             completion?(races)

@@ -47,7 +47,7 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let race = races[section]
-        return Sorter().byAlphabetical(race).count
+        return Sorter().animalsByAlphabetical(race).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,18 +55,20 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
         var config = cell.defaultContentConfiguration()
 
         let race = races[indexPath.section]
-        let animals = Sorter().byAlphabetical(race)
+        let animals = Sorter().animalsByAlphabetical(race)
         let animal = animals[indexPath.row]
             
             config.text = animal.name
-            config.textProperties.color = .black
             config.textProperties.font = .boldSystemFont(ofSize: 20)
             
             config.secondaryText = "Age: \(animal.age)"
             
         if let image = animal.image {
             config.image = UIImage(data: image)
-            config.imageProperties.cornerRadius = 10
+            config.imageProperties.maximumSize.height = 60
+            config.imageProperties.maximumSize.width = 60
+
+            config.imageProperties.cornerRadius = 30
         }
         
         cell.contentConfiguration = config
@@ -74,7 +76,7 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return races[section].name
+        return  races[section].name
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

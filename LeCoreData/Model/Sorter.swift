@@ -11,7 +11,7 @@ import Foundation
 struct Sorter {
     
     
-    func byAlphabetical(_ race: Race) -> [Animal] {
+    func animalsByAlphabetical(_ race: Race) -> [Animal] {
         if let animals = race.animals?.allObjects as? [Animal] {
             let sorted = animals.sorted(by: {$0.name! < $1.name!})
             return sorted
@@ -19,5 +19,4 @@ struct Sorter {
             return []
         }
     }
-    
 }

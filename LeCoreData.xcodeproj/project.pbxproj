@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		9CAACE1D2778FB1A004A1D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE1C2778FB1A004A1D0E /* AppDelegate.swift */; };
 		9CAACE1F2778FB1A004A1D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE1E2778FB1A004A1D0E /* SceneDelegate.swift */; };
-		9CAACE212778FB1A004A1D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE202778FB1A004A1D0E /* ViewController.swift */; };
 		9CAACE242778FB1A004A1D0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAACE222778FB1A004A1D0E /* Main.storyboard */; };
 		9CAACE272778FB1A004A1D0E /* LeCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE252778FB1A004A1D0E /* LeCoreData.xcdatamodeld */; };
 		9CAACE292778FB1B004A1D0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAACE282778FB1B004A1D0E /* Assets.xcassets */; };
 		9CAACE2C2778FB1B004A1D0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAACE2A2778FB1B004A1D0E /* LaunchScreen.storyboard */; };
+		9CAACE352778FD78004A1D0E /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE342778FD78004A1D0E /* ListController.swift */; };
+		9CAACE372778FD88004A1D0E /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE362778FD88004A1D0E /* AddController.swift */; };
+		9CAACE392778FD99004A1D0E /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE382778FD99004A1D0E /* DetailController.swift */; };
+		9CAACE3C2779062B004A1D0E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE3B2779062B004A1D0E /* CoreDataHelper.swift */; };
+		9CAACE3E2779087B004A1D0E /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE3D2779087B004A1D0E /* AlertHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9CAACE192778FB19004A1D0E /* LeCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAACE1C2778FB1A004A1D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CAACE1E2778FB1A004A1D0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9CAACE202778FB1A004A1D0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CAACE232778FB1A004A1D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CAACE262778FB1A004A1D0E /* LeCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeCoreData.xcdatamodel; sourceTree = "<group>"; };
 		9CAACE282778FB1B004A1D0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CAACE2B2778FB1B004A1D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CAACE2D2778FB1B004A1D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CAACE342778FD78004A1D0E /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		9CAACE362778FD88004A1D0E /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
+		9CAACE382778FD99004A1D0E /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		9CAACE3B2779062B004A1D0E /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		9CAACE3D2779087B004A1D0E /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,10 @@
 		9CAACE1B2778FB19004A1D0E /* LeCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				9CAACE3A27790562004A1D0E /* Model */,
+				9CAACE332778FCEE004A1D0E /* Controller */,
 				9CAACE1C2778FB1A004A1D0E /* AppDelegate.swift */,
 				9CAACE1E2778FB1A004A1D0E /* SceneDelegate.swift */,
-				9CAACE202778FB1A004A1D0E /* ViewController.swift */,
 				9CAACE222778FB1A004A1D0E /* Main.storyboard */,
 				9CAACE282778FB1B004A1D0E /* Assets.xcassets */,
 				9CAACE2A2778FB1B004A1D0E /* LaunchScreen.storyboard */,
@@ -68,6 +77,25 @@
 				9CAACE252778FB1A004A1D0E /* LeCoreData.xcdatamodeld */,
 			);
 			path = LeCoreData;
+			sourceTree = "<group>";
+		};
+		9CAACE332778FCEE004A1D0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CAACE342778FD78004A1D0E /* ListController.swift */,
+				9CAACE362778FD88004A1D0E /* AddController.swift */,
+				9CAACE382778FD99004A1D0E /* DetailController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9CAACE3A27790562004A1D0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CAACE3B2779062B004A1D0E /* CoreDataHelper.swift */,
+				9CAACE3D2779087B004A1D0E /* AlertHelper.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CAACE212778FB1A004A1D0E /* ViewController.swift in Sources */,
 				9CAACE1D2778FB1A004A1D0E /* AppDelegate.swift in Sources */,
+				9CAACE372778FD88004A1D0E /* AddController.swift in Sources */,
 				9CAACE1F2778FB1A004A1D0E /* SceneDelegate.swift in Sources */,
+				9CAACE3C2779062B004A1D0E /* CoreDataHelper.swift in Sources */,
+				9CAACE3E2779087B004A1D0E /* AlertHelper.swift in Sources */,
 				9CAACE272778FB1A004A1D0E /* LeCoreData.xcdatamodeld in Sources */,
+				9CAACE392778FD99004A1D0E /* DetailController.swift in Sources */,
+				9CAACE352778FD78004A1D0E /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -276,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

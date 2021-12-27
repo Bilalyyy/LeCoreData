@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C32057D277A066B00E8D781 /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32057C277A066B00E8D781 /* Sorter.swift */; };
 		9CAACE1D2778FB1A004A1D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE1C2778FB1A004A1D0E /* AppDelegate.swift */; };
 		9CAACE1F2778FB1A004A1D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAACE1E2778FB1A004A1D0E /* SceneDelegate.swift */; };
 		9CAACE242778FB1A004A1D0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAACE222778FB1A004A1D0E /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C32057C277A066B00E8D781 /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
 		9CAACE192778FB19004A1D0E /* LeCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAACE1C2778FB1A004A1D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CAACE1E2778FB1A004A1D0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				9CAACE3B2779062B004A1D0E /* CoreDataHelper.swift */,
 				9CAACE3D2779087B004A1D0E /* AlertHelper.swift */,
+				9C32057C277A066B00E8D781 /* Sorter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				9CAACE3C2779062B004A1D0E /* CoreDataHelper.swift in Sources */,
 				9CAACE3E2779087B004A1D0E /* AlertHelper.swift in Sources */,
 				9CAACE272778FB1A004A1D0E /* LeCoreData.xcdatamodeld in Sources */,
+				9C32057D277A066B00E8D781 /* Sorter.swift in Sources */,
 				9CAACE392778FD99004A1D0E /* DetailController.swift in Sources */,
 				9CAACE352778FD78004A1D0E /* ListController.swift in Sources */,
 			);

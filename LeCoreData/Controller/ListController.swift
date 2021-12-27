@@ -47,10 +47,7 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let race = races[section]
-        if let animals: [Animal] = race.animals?.allObjects as? [Animal] {
-            return animals.count
-        }
-        return 0
+        return Sorter().byAlphabetical(race).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,8 +55,8 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
         var config = cell.defaultContentConfiguration()
 
         let race = races[indexPath.section]
-        if let animals = race.animals?.allObjects as? [Animal] {
-            let animal = animals[indexPath.row]
+        let animals = Sorter().byAlphabetical(race)
+        let animal = animals[indexPath.row]
             
             config.text = animal.name
             config.textProperties.color = .black
@@ -67,10 +64,9 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
             
             config.secondaryText = "Age: \(animal.age)"
             
-            if let image = animal.image {
-                config.image = UIImage(data: image)
-                config.imageProperties.cornerRadius = 10
-            }
+        if let image = animal.image {
+            config.image = UIImage(data: image)
+            config.imageProperties.cornerRadius = 10
         }
         
         cell.contentConfiguration = config

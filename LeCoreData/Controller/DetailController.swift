@@ -20,16 +20,12 @@ class DetailController: UIViewController {
         if let image = animal.image {
             return UIImage(data: image)
         } else {
-            return UIImage(systemName: "house")
+            return nil
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         setup()
     }
     

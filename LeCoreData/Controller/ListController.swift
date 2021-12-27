@@ -23,6 +23,16 @@ class ListController: UIViewController {
         super.viewDidAppear(animated)
         getRaces()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToDetail" {
+            if let next = segue.destination as? DetailController {
+                next.animal = sender as? Animal
+            }
+        }
+        
+    }
+            
 }
 
 
@@ -73,6 +83,11 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
         
         cell.contentConfiguration = config
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let animal = Sorter().animalsByAlphabetical(races[indexPath.section])[indexPath.row]
+            performSegue(withIdentifier: "ToDetail", sender: animal)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

@@ -53,14 +53,61 @@
                     <view key="view" contentMode="scaleToFill" id="Gjm-sx-ElV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chargement..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciC-By-AvX">
+                                <rect key="frame" x="133.5" y="156" width="147.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZ5-Cn-akR">
+                                <rect key="frame" x="32" y="634" width="350" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IeZ-Sd-KbZ">
+                                <rect key="frame" x="32" y="663" width="350" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lvk-1a-Bom">
+                                <rect key="frame" x="32" y="273" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="DoX-eE-nIt"/>
+                                    <constraint firstAttribute="width" constant="350" id="UxR-7z-UFZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2rK-hY-wDg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lZ5-Cn-akR" firstAttribute="trailing" secondItem="lvk-1a-Bom" secondAttribute="trailing" id="3DB-bL-yyt"/>
+                            <constraint firstItem="ciC-By-AvX" firstAttribute="top" secondItem="2rK-hY-wDg" secondAttribute="top" constant="16" id="F38-h7-zwA"/>
+                            <constraint firstItem="lvk-1a-Bom" firstAttribute="centerY" secondItem="Gjm-sx-ElV" secondAttribute="centerY" id="IJj-ab-mKJ"/>
+                            <constraint firstItem="lZ5-Cn-akR" firstAttribute="leading" secondItem="lvk-1a-Bom" secondAttribute="leading" id="SRW-lT-qAq"/>
+                            <constraint firstItem="2rK-hY-wDg" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IeZ-Sd-KbZ" secondAttribute="bottom" constant="50" id="TvA-A4-dTz"/>
+                            <constraint firstItem="lvk-1a-Bom" firstAttribute="centerX" secondItem="Gjm-sx-ElV" secondAttribute="centerX" id="dma-Ci-lh6"/>
+                            <constraint firstItem="IeZ-Sd-KbZ" firstAttribute="top" secondItem="lZ5-Cn-akR" secondAttribute="bottom" constant="5" id="h1M-Al-B6o"/>
+                            <constraint firstItem="IeZ-Sd-KbZ" firstAttribute="leading" secondItem="lvk-1a-Bom" secondAttribute="leading" id="ioG-xg-geI"/>
+                            <constraint firstItem="ciC-By-AvX" firstAttribute="centerX" secondItem="Gjm-sx-ElV" secondAttribute="centerX" id="mCi-tG-f2j"/>
+                            <constraint firstItem="IeZ-Sd-KbZ" firstAttribute="trailing" secondItem="lvk-1a-Bom" secondAttribute="trailing" id="vct-jp-aPd"/>
+                            <constraint firstItem="lZ5-Cn-akR" firstAttribute="top" secondItem="lvk-1a-Bom" secondAttribute="bottom" constant="11" id="wa3-Z1-Wy2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UVC-Tg-Hbg"/>
+                    <connections>
+                        <outlet property="prImage" destination="lvk-1a-Bom" id="7q9-2j-cif"/>
+                        <outlet property="prLblAge" destination="IeZ-Sd-KbZ" id="cQT-Vv-YXH"/>
+                        <outlet property="prLblName" destination="ciC-By-AvX" id="dtw-ka-mOF"/>
+                        <outlet property="prLblRace" destination="lZ5-Cn-akR" id="4Wq-7w-XYO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQm-KV-jpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2499" y="615"/>
+            <point key="canvasLocation" x="2498.5507246376815" y="614.73214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q37-I7-SiW">
@@ -221,6 +268,9 @@
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="hare.fill" catalog="system" width="128" height="91"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

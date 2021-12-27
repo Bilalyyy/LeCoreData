@@ -18,11 +18,13 @@ class AddController: UIViewController {
     @IBOutlet weak var prBtnAddAnimal: UIButton!
     @IBOutlet weak var prImage: UIImageView!
     @IBOutlet weak var prLblAge: UILabel!
-    
     @IBOutlet weak var prStepper: UIStepper!
+
+
     var races : [Race] = []
     var imagePicker = UIImagePickerController()
     var libraryPicker: PHPickerViewController?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +70,7 @@ class AddController: UIViewController {
     }
     
     @IBAction func stepperAction(_ sender: UIStepper) {
+        prLblAge.text = " Age: \(Int(prStepper.value))"
     }
     
 }

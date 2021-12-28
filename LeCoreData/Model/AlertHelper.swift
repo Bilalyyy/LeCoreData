@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AlertHelper {
+struct AlertHelper {
     func alertAddRace(_ controller: UIViewController, completion: ((String?) -> Void)?) {
         let alert = UIAlertController(title: "Ajouter une race", message: "Quel race voulez vous ajouter?", preferredStyle: .alert)
 

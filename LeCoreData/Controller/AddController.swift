@@ -102,7 +102,10 @@ extension AddController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return races[row].name
     }
+    
 }
+
+
 
 
 extension AddController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -133,6 +136,8 @@ extension AddController: UIImagePickerControllerDelegate, UINavigationController
     }
     
 }
+
+
 
 
 extension AddController: PHPickerViewControllerDelegate {
@@ -167,6 +172,7 @@ extension AddController: PHPickerViewControllerDelegate {
 
 
 
+
 extension AddController: UITextFieldDelegate {
     
     func setupTextField(){
@@ -177,4 +183,5 @@ extension AddController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
 }

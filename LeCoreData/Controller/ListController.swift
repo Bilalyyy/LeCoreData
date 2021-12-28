@@ -16,7 +16,6 @@ class ListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,7 +29,6 @@ class ListController: UIViewController {
                 next.animal = sender as? Animal
             }
         }
-        
     }
             
 }
@@ -112,4 +110,5 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
         return 80
     }
 
+    
 }

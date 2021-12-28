@@ -9,6 +9,8 @@ import UIKit
 import CoreData
 
 class CoreDataHelper {
+    
+    
     static let shared = CoreDataHelper()
     var successCompletion: ((Bool)-> Void)?
     
@@ -54,7 +56,7 @@ class CoreDataHelper {
         }
     }
     
-    
+    //effacer les donées
     func deleteAnimal(_ animal: Animal, completion: ((Bool)-> Void)?) {
         self.successCompletion = completion
         context.delete(animal)

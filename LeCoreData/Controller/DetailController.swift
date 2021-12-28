@@ -35,4 +35,5 @@ class DetailController: UIViewController {
         prLblRace.text = "Je suis un \(animal.race?.name ?? "...")"
         prLblAge.text = "Age: \(animal.age) ans"
     }
+    
 }

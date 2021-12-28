@@ -90,6 +90,20 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: "ToDetail", sender: animal)
     }
     
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let animal = Sorter().animalsByAlphabetical(races[indexPath.section])[indexPath.row]
+            CoreDataHelper.shared.deleteAnimal(animal) { sucess in
+                if sucess {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            }
+        }
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return  races[section].name
     }

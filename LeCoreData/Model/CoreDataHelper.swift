@@ -55,6 +55,23 @@ class CoreDataHelper {
     }
     
     
+    func deleteAnimal(_ animal: Animal, completion: ((Bool)-> Void)?) {
+        self.successCompletion = completion
+        context.delete(animal)
+        saveContext()
+    }
+    
+    /*
+    func deleteRace(_ race: Race, completion: ((Bool)-> Void)?){
+        self.successCompletion = completion
+        let animals = Sorter().animalsByAlphabetical(race)
+        animals.forEach { animal in
+            context.delete(animal)
+        }
+        context.delete(race)
+        saveContext()
+    }
+    */
     
     //Obtenir les données
     func getRaces(_ completion: (([Race])-> Void)?) {
